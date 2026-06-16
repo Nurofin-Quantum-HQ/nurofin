@@ -1,0 +1,9 @@
+{
+  "enabledMcpjsonServers": [
+    "gdrive"
+  ],
+  "disabledMcpjsonServers": [
+    "openai-images"
+  ],
+  "enableAllProjectMcpServers": true
+}

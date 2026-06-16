@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUROFIN Quantum Flux - Company Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-blue: #173eea;
+        --secondary-indigo: #4f437f;
+        --accent-purple: #b137ff;
+        --accent-azure: #67c8ff;
+        --text-dark: #1a1a2e;
+        --bg-light: #f4f6ff;
+        --bg-white: #ffffff;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-dark);
+        background-color: var(--bg-white);
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 0.5em;
+      }
+
+      /* Utility Classes */
+      .text-primary {
+        color: var(--primary-blue) !important;
+      }
+      .text-secondary {
+        color: var(--secondary-indigo) !important;
+      }
+      .text-purple {
+        color: var(--accent-purple) !important;
+      }
+      .text-azure {
+        color: var(--accent-azure) !important;
+      }
+      .text-white {
+        color: white !important;
+      }
+
+      .bg-primary {
+        background-color: var(--primary-blue) !important;
+      }
+      .bg-secondary {
+        background-color: var(--secondary-indigo) !important;
+      }
+      .bg-purple {
+        background-color: var(--accent-purple) !important;
+      }
+      .bg-light {
+        background-color: var(--bg-light) !important;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      /* Section Styling */
+      section {
+        padding-bottom: 80px;
+        position: relative;
+        page-break-after: always;
+      }
+
+      .section-header {
+        background-color: var(--primary-blue);
+        padding: 20px 0;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .section-header h2 {
+        color: white;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .section-header.purple {
+        background-color: var(--accent-purple);
+      }
+      .section-header.indigo {
+        background-color: var(--secondary-indigo);
+      }
+
+      /* Logo Placeholder */
+      .logo-placeholder {
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        width: 120px;
+        height: 50px;
+        border: 2px dashed var(--primary-blue);
+        background-color: var(--bg-light);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-blue);
+        font-size: 0.8rem;
+        font-weight: 600;
+        z-index: 10;
+      }
+
+      .section-header .logo-placeholder {
+        top: 50%;
+        transform: translateY(-50%);
+        border-color: white;
+        color: var(--primary-blue);
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(135deg, #ffffff 60%, rgba(103, 200, 255, 0.15) 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 80px 0;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        right: -5%;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        border: 40px solid rgba(23, 62, 234, 0.05);
+        z-index: 0;
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: -5%;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 30px solid rgba(177, 55, 255, 0.05);
+        z-index: 0;
+      }
+
+      .hero-content {
+        z-index: 2;
+        max-width: 900px;
+      }
+
+      .hero h1 {
+        font-size: 4.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 2rem;
+        color: var(--secondary-indigo);
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .divider {
+        height: 4px;
+        width: 80px;
+        background-color: var(--accent-purple);
+        margin: 0 auto 2rem;
+      }
+
+      .hero-tagline {
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-sub {
+        color: var(--secondary-indigo);
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+      }
+
+      .confidential-badge {
+        display: inline-block;
+        padding: 8px 24px;
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 3rem;
+      }
+
+      .hero-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-blue);
+        color: white;
+        padding: 15px 0;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      /* Cards & Grids */
+      .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+      }
+
+      .card-header-strip {
+        height: 6px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .grid-2-sidebar {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 50px;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      /* Platform Cards */
+      .platform-card {
+        border-left: 5px solid;
+        padding: 30px;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 0 8px 8px 0;
+        height: 100%;
+        position: relative;
+      }
+
+      .platform-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .workflow-steps {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .step-pill {
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      /* Feature Lists */
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .feature-list li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+
+      .feature-list li::before {
+        content: '•';
+        color: var(--accent-purple);
+        font-weight: bold;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: -5px;
+      }
+
+      /* Deep Dive Sections */
+      .flow-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .step-number {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .comparison-table td {
+        padding: 15px;
+        border: 1px solid #eee;
+      }
+
+      /* Colors specific */
+      .border-primary {
+        border-color: var(--primary-blue) !important;
+      }
+      .border-purple {
+        border-color: var(--accent-purple) !important;
+      }
+      .border-azure {
+        border-color: var(--accent-azure) !important;
+      }
+      .border-indigo {
+        border-color: var(--secondary-indigo) !important;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        background-color: var(--primary-blue);
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: all 0.3s;
+      }
+
+      .btn-white {
+        background-color: white;
+        color: var(--primary-blue);
+      }
+
+      .btn-outline {
+        border: 2px solid white;
+        color: white;
+        background: transparent;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+        .grid-2,
+        .grid-2-sidebar,
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .logo-placeholder {
+          position: static;
+          margin-bottom: 20px;
+        }
+        .section-header .logo-placeholder {
+          position: absolute;
+          top: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="logo-placeholder">[ LOGO ]</div>
+      <div class="hero-content">
+        <h1>NUROFIN</h1>
+        <div class="hero-subtitle">Quantum Flux LLP</div>
+        <div class="divider"></div>
+        <p class="hero-tagline">Intelligent Orchestration for Modern Financial Services</p>
+        <p class="hero-sub">Empowering Institutions | Enabling Innovation | Ensuring Control</p>
+
+        <div class="confidential-badge">CONFIDENTIAL — Bank MD Presentation | 2026</div>
+      </div>
+      <div class="hero-footer">AI-Powered Financial Intelligence Infrastructure</div>
+    </section>
+
+    <!-- COMPANY OVERVIEW -->
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>Company Overview</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-2-sidebar">
+          <div>
+            <h3 class="text-primary">Who We Are</h3>
+            <p>
+              NUROFIN Quantum Flux is an AI-powered technology innovation company transforming how financial
+              institutions make decisions. We build intelligent orchestration, decision-support, and analytics platforms
+              that empower banks, financial institutions, enterprises, fintech platforms, and public-sector ecosystems
+              to make smarter decisions faster while maintaining complete operational control.
+            </p>
+
+            <h3 class="text-secondary" style="margin-top: 30px">Our Strategic Approach</h3>
+            <p>
+              NUROFIN operates as a strategic technology partner, helping institutions design, govern, and optimize
+              complex financial and operational workflows across systems, partners, and journeys. We strengthen your
+              capabilities without replacing your authority.
+            </p>
+          </div>
+          <div>
+            <div class="card" style="border-top: 4px solid var(--primary-blue); background: var(--bg-light)">
+              <h4 class="text-primary">🚀 What Makes Us Different</h4>
+              <ul class="feature-list" style="margin-top: 20px">
+                <li>
+                  <strong>Institution-Owned Decisions:</strong> You define policies, approve transactions, and own all
+                  outcomes
+                </li>
+                <li><strong>Full Operational Control:</strong> You manage funds, risk, and customer relationships</li>
+                <li>
+                  <strong>Technology-Enabled Intelligence:</strong> We provide the intelligence layer that strengthens
+                  your decision-making
+                </li>
+                <li>
+                  <strong>Transparent Partnership:</strong> Clear separation between enablement and execution authority
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE PROPOSITION -->
+    <section>
+      <div class="section-header indigo">
+        <div class="container">
+          <h2>Our Value Proposition</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-header-strip bg-primary"></div>
+            <div style="font-size: 2.5rem; margin-bottom: 10px">🎯</div>
+            <h4 class="text-primary">Institution-First</h4>
+            <p style="font-size: 0.9rem">You define policies, approve transactions, and own all outcomes</p>
+          </div>
+          <div class="card">
+            <div class="card-header-strip bg-purple"></div>
+            <div style="font-size: 2.5rem; margin-bottom: 10px">🔒</div>
+            <h4 class="text-secondary">Complete Control</h4>
+            <p style="font-size: 0.9rem">You manage funds, risk, and customer relationships end-to-end</p>
+          </div>
+          <div class="card">
+            <div class="card-header-strip bg-primary"></div>
+            <div style="font-size: 2.5rem; margin-bottom: 10px">🧠</div>
+            <h4 class="text-primary">AI Intelligence</h4>
+            <p style="font-size: 0.9rem">Cutting-edge intelligence layer that strengthens decision-making</p>
+          </div>
+          <div class="card">
+            <div class="card-header-strip bg-purple"></div>
+            <div style="font-size: 2.5rem; margin-bottom: 10px">🤝</div>
+            <h4 class="text-secondary">Transparent Partner</h4>
+            <p style="font-size: 0.9rem">Clear separation between enablement and execution authority</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORM ECOSYSTEM -->
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>Our Intelligent Platform Ecosystem</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem">
+          4 integrated solutions, each designed to solve critical challenges. Deploy individually or combine for
+          complete transformation.
+        </p>
+
+        <div class="grid-2">
+          <!-- GMDI -->
+          <div class="platform-card" style="border-color: var(--primary-blue)">
+            <span class="platform-badge bg-primary text-azure">Transaction Governance</span>
+            <h3 class="text-primary">GMDI — Global Money Decision Infrastructure</h3>
+            <p class="text-secondary" style="font-weight: 500">The Programmable Decision Layer for Money Movement</p>
+
+            <div class="workflow-steps">
+              <span class="step-pill bg-primary text-white">Define Rules →</span>
+              <span class="step-pill bg-primary text-white">Automate →</span>
+              <span class="step-pill bg-primary text-white">Govern →</span>
+              <span class="step-pill bg-primary text-white">Execute</span>
+            </div>
+
+            <ul class="feature-list">
+              <li>Rule-Based Decision Frameworks</li>
+              <li>Automated Payout Orchestration</li>
+              <li>Maker-Checker Authorization</li>
+              <li>Zero Manual Dependency</li>
+            </ul>
+
+            <div class="stats-row">
+              <span class="text-primary">60% ↓ Manual Work</span>
+              <span class="text-primary">100% Audit Trail</span>
+              <span class="text-primary">85% Faster Processing</span>
+            </div>
+          </div>
+
+          <!-- LendLogic -->
+          <div class="platform-card" style="border-color: var(--accent-purple)">
+            <span class="platform-badge bg-purple text-white">Lending Intelligence</span>
+            <h3 class="text-purple">LendLogic AI</h3>
+            <p class="text-secondary" style="font-weight: 500">Dynamic Behavioral Assessment for Inclusive Lending</p>
+
+            <div class="workflow-steps">
+              <span class="step-pill bg-purple text-white">Track →</span>
+              <span class="step-pill bg-purple text-white">Score →</span>
+              <span class="step-pill bg-purple text-white">Adapt →</span>
+              <span class="step-pill bg-purple text-white">Deploy</span>
+            </div>
+
+            <ul class="feature-list">
+              <li>Continuous Ecosystem Tracking</li>
+              <li>Real-time Behavioral Scoring</li>
+              <li>Adaptive Product Matching</li>
+              <li>Policy Automation</li>
+            </ul>
+
+            <div class="stats-row">
+              <span class="text-purple">40% Inclusion ↑</span>
+              <span class="text-purple">35% NPA ↓</span>
+              <span class="text-purple">3x Portfolio Growth</span>
+            </div>
+          </div>
+
+          <!-- RecoveryIQ -->
+          <div class="platform-card" style="border-color: var(--accent-azure)">
+            <span class="platform-badge bg-light text-primary" style="border: 1px solid var(--accent-azure)">Collections &amp; Support</span>
+            <h3 class="text-primary">RecoveryIQ</h3>
+            <p class="text-secondary" style="font-weight: 500">Predictive Collections Intelligence to Reduce NPAs</p>
+
+            <div class="workflow-steps">
+              <span class="step-pill" style="background: var(--accent-azure); color: #000">Predict →</span>
+              <span class="step-pill" style="background: var(--accent-azure); color: #000">Timing →</span>
+              <span class="step-pill" style="background: var(--accent-azure); color: #000">Channel →</span>
+              <span class="step-pill" style="background: var(--accent-azure); color: #000">Automate</span>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin: 15px 0; font-size: 1.5rem">
+              <span>📱</span> <span>📞</span> <span>🚶</span> <span>💳</span>
+            </div>
+
+            <div class="stats-row">
+              <span class="text-primary">25-40% NPA ↓</span>
+              <span class="text-primary">50% Faster Recovery</span>
+              <span class="text-primary">35% Cost ↓</span>
+            </div>
+          </div>
+
+          <!-- FinSync Advisory -->
+          <div class="platform-card" style="border-color: var(--secondary-indigo)">
+            <span class="platform-badge bg-secondary text-white">Strategic Advisory</span>
+            <h3 class="text-secondary">FinSync Advisory</h3>
+            <p class="text-secondary" style="font-weight: 500">
+              Expert Consulting for Financial Services Transformation
+            </p>
+
+            <div style="margin-top: 20px">
+              <p style="margin-bottom: 10px">
+                <strong>Payments Architecture:</strong> Infrastructure design &amp; strategy
+              </p>
+              <p style="margin-bottom: 10px"><strong>Fintech Product:</strong> Innovation &amp; scalability guidance</p>
+              <p style="margin-bottom: 10px">
+                <strong>Banking Strategy:</strong> Digital transformation &amp; modernization
+              </p>
+              <p><strong>Regulatory Frameworks:</strong> Compliance implementation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATFORM DEEP DIVE: GMDI -->
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>GMDI — Transaction Governance</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <div style="background: #ffebeb; padding: 15px; border-radius: 6px; margin-bottom: 20px">
+              <strong>❌ Today:</strong> Manual processes, no audit trails, lack of governance
+            </div>
+            <div style="background: #e6fcf5; padding: 15px; border-radius: 6px; margin-bottom: 30px">
+              <strong>✅ GMDI:</strong> Automated Rule-Based Decision Engine
+            </div>
+
+            <h4 class="text-primary">Key Benefits</h4>
+            <table class="comparison-table">
+              <tbody><tr>
+                <td>Complete Auditability ✓</td>
+                <td>Automated Orchestration ✓</td>
+              </tr>
+              <tr>
+                <td>Reduced Manual Work ✓</td>
+                <td>Better Compliance ✓</td>
+              </tr>
+              <tr>
+                <td>Transparency ✓</td>
+                <td>Control &amp; Governance ✓</td>
+              </tr>
+              <tr>
+                <td>Scalability ✓</td>
+                <td>Zero Errors ✓</td>
+              </tr>
+            </tbody></table>
+          </div>
+          <div>
+            <div class="flow-step">
+              <div class="step-number bg-primary">1</div>
+              <div>
+                <strong>DEFINE RULES</strong>
+                <p style="font-size: 0.9rem; margin: 0">Create multiple decision frameworks, modify as needed</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="step-number bg-primary">2</div>
+              <div>
+                <strong>AUTOMATE</strong>
+                <p style="font-size: 0.9rem; margin: 0">Payout orchestration, authorization flows, predefined logic</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="step-number bg-primary">3</div>
+              <div>
+                <strong>GOVERN</strong>
+                <p style="font-size: 0.9rem; margin: 0">Complete audit trail, compliance control, transparency</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="step-number bg-primary">4</div>
+              <div>
+                <strong>EXECUTE</strong>
+                <p style="font-size: 0.9rem; margin: 0">Reduced manual work, better control, instant execution</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE NUROFIN ADVANTAGE -->
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>The NUROFIN Advantage</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-2" style="grid-template-columns: repeat(3, 1fr)">
+          <div class="card" style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 15px">🎯</div>
+            <h3 class="text-primary">Reduce NPAs</h3>
+            <p>Through predictive intelligence &amp; behavioral scoring</p>
+            <div style="margin-top: 15px; font-weight: bold; color: var(--accent-purple); font-size: 1.5rem">
+              25-40%
+            </div>
+            <div style="font-size: 0.8rem; text-transform: uppercase">Reduction</div>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 15px">🛡</div>
+            <h3 class="text-primary">Ensure Compliance</h3>
+            <p>Complete audit trails &amp; governance by design</p>
+            <div style="margin-top: 15px; font-weight: bold; color: var(--accent-purple); font-size: 1.5rem">100%</div>
+            <div style="font-size: 0.8rem; text-transform: uppercase">Audit Coverage</div>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 3rem; margin-bottom: 15px">⚡</div>
+            <h3 class="text-primary">Accelerate Processing</h3>
+            <p>Automated workflows &amp; instant decision-making</p>
+            <div style="margin-top: 15px; font-weight: bold; color: var(--accent-purple); font-size: 1.5rem">85%</div>
+            <div style="font-size: 0.8rem; text-transform: uppercase">Faster</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE SERVE -->
+    <section>
+      <div class="section-header indigo">
+        <div class="container">
+          <h2>Who We Serve</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-4">
+          <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px">🏦</div>
+            <h5 class="text-secondary">Banks &amp; Financial Institutions</h5>
+            <p style="font-size: 0.8rem; margin-top: 10px"><strong>$5B - $50B</strong><br>Assets Under Management</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px">💼</div>
+            <h5 class="text-secondary">NBFCs &amp; Specialized Lenders</h5>
+            <p style="font-size: 0.8rem; margin-top: 10px"><strong>$500M+</strong><br>Loan Portfolios</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px">🚀</div>
+            <h5 class="text-secondary">Fintech &amp; Embedded Finance</h5>
+            <p style="font-size: 0.8rem; margin-top: 10px"><strong>Series B+</strong><br>Growth Stage Platforms</p>
+          </div>
+          <div class="card">
+            <div style="font-size: 2rem; margin-bottom: 10px">🏢</div>
+            <h5 class="text-secondary">Enterprises</h5>
+            <p style="font-size: 0.8rem; margin-top: 10px"><strong>Complex</strong><br>Workflow Automation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGY & SECURITY -->
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>Technology &amp; Security Excellence</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+          Built on enterprise-grade, cloud-native architecture with security, scalability, and transparency at the core.
+        </p>
+
+        <div class="grid-2">
+          <div class="card bg-light border-primary">
+            <h3 class="text-primary">🔒 Bank-Grade Security</h3>
+            <p>
+              End-to-end encryption, data localization, and consent-driven data usage ensuring complete protection of
+              sensitive financial information.
+            </p>
+          </div>
+          <div class="card bg-light border-primary">
+            <h3 class="text-primary">⚡ Cloud-Native Architecture</h3>
+            <p>
+              Scalable, resilient infrastructure that grows with your business without performance degradation.
+              Microservices-based for flexibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-4" style="margin-top: 30px; text-align: center">
+          <div class="card" style="padding: 15px"><strong class="text-secondary">Scalability</strong></div>
+          <div class="card" style="padding: 15px"><strong class="text-secondary">Security</strong></div>
+          <div class="card" style="padding: 15px"><strong class="text-secondary">Transparency</strong></div>
+          <div class="card" style="padding: 15px"><strong class="text-secondary">Compliance</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET TRACTION -->
+    <section>
+      <div class="section-header purple">
+        <div class="container">
+          <h2>Market Traction &amp; Opportunity</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <h3 class="text-purple">Market Opportunity</h3>
+            <div style="font-size: 3rem; font-weight: bold; color: var(--text-dark); margin: 10px 0">$47B</div>
+            <p class="text-secondary" style="font-weight: 600">Global TAM by 2028</p>
+            <p><strong>$12B</strong> SAM | <strong>$180M</strong> SOM (3yr)</p>
+
+            <ul class="feature-list" style="margin-top: 20px">
+              <li>Digital transformation mandates from regulators</li>
+              <li>Rising NPA concerns driving AI adoption</li>
+              <li>Financial inclusion initiatives requiring new models</li>
+              <li>Operational efficiency pressure in competitive markets</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-purple">Current Traction</h3>
+            <div class="grid-2" style="gap: 15px; margin-bottom: 20px">
+              <div class="card" style="padding: 15px; text-align: center">
+                <div style="font-size: 1.5rem; font-weight: bold">8</div>
+                <div style="font-size: 0.8rem">Active Pilots</div>
+              </div>
+              <div class="card" style="padding: 15px; text-align: center">
+                <div style="font-size: 1.5rem; font-weight: bold">$2.1M</div>
+                <div style="font-size: 0.8rem">ARR</div>
+              </div>
+              <div class="card" style="padding: 15px; text-align: center">
+                <div style="font-size: 1.5rem; font-weight: bold">3</div>
+                <div style="font-size: 0.8rem">Enterprise Contracts</div>
+              </div>
+              <div class="card" style="padding: 15px; text-align: center">
+                <div style="font-size: 1.5rem; font-weight: bold">$8.5M</div>
+                <div style="font-size: 0.8rem">Pipeline</div>
+              </div>
+            </div>
+
+            <div class="card bg-light">
+              <p style="margin-bottom: 5px">✅ Platform MVP deployed with 3 Tier-2 banks</p>
+              <p style="margin-bottom: 5px">✅ 35% NPA reduction validated in pilot programs</p>
+              <p style="margin-bottom: 5px">✅ RBI compliance framework certification</p>
+              <p style="margin: 0">✅ Strategic SI partnership finalized</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND GUIDELINES -->
+    <section>
+      <div class="section-header indigo">
+        <div class="container">
+          <h2>Brand Identity System</h2>
+          <div class="logo-placeholder">[ LOGO ]</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid-4">
+          <div>
+            <div style="height: 100px; background: #173eea; border-radius: 6px; margin-bottom: 10px"></div>
+            <strong>Deep Royal Blue</strong><br>#173EEA
+          </div>
+          <div>
+            <div style="height: 100px; background: #4f437f; border-radius: 6px; margin-bottom: 10px"></div>
+            <strong>Indigo Electric</strong><br>#4F437F
+          </div>
+          <div>
+            <div style="height: 100px; background: #b137ff; border-radius: 6px; margin-bottom: 10px"></div>
+            <strong>Tech Purple</strong><br>#B137FF
+          </div>
+          <div>
+            <div style="height: 100px; background: #67c8ff; border-radius: 6px; margin-bottom: 10px"></div>
+            <strong>Electric Azure</strong><br>#67C8FF
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 40px">
+          <div>
+            <h4 class="text-secondary">Typography</h4>
+            <h2 style="font-family: 'Poppins', sans-serif">Poppins Bold (Headlines)</h2>
+            <p style="font-family: 'Inter', sans-serif">
+              Inter Regular (Body text). Used for legibility in dense financial documents and UI interfaces.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-secondary">Brand Voice</h4>
+            <p style="font-size: 1.2rem; font-style: italic; color: var(--primary-blue)">
+              "Authoritative. Innovative. Trustworthy. Precise."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="contact-section">
+      <div class="logo-placeholder" style="background: rgba(255, 255, 255, 0.1); border-color: white; color: white">
+        [ LOGO ]
+      </div>
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px">Ready to Transform Your Financial Operations?</h2>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px; opacity: 0.9">
+          Join leading financial institutions using NUROFIN to automate decisioning and reduce risk.
+        </p>
+
+        <div class="card" style="max-width: 500px; margin: 0 auto 40px; color: var(--text-dark)">
+          <h3 style="margin-bottom: 5px">Vincent Lucas</h3>
+          <p class="text-primary" style="font-weight: 600; margin-bottom: 20px">Founder &amp; CEO</p>
+          <p style="margin-bottom: 5px">📍 Bangalore, India</p>
+          <p>✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="25534c4b46404b5149654b50574a434c4b0b464a48">[email&#160;protected]</a></p>
+        </div>
+
+        <div>
+          <a href="#" class="btn btn-white">Request Demo</a>
+          <a href="#" class="btn btn-outline">Schedule a Call</a>
+        </div>
+
+        <div style="margin-top: 60px; font-size: 0.9rem; opacity: 0.7">
+          © 2026 NUROFIN Quantum Flux LLP. Building the Future of Financial Intelligence.
+        </div>
+      </div>
+    </section>
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>
