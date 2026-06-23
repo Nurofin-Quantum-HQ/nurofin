@@ -1545,6 +1545,15 @@ a.nav__dropdown-item .nav__dropdown-title {
 
 .footer__col a:hover { color: var(--azure); }
 
+.footer__address {
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;
@@ -2580,6 +2589,9 @@ a.nav__dropdown-item .nav__dropdown-title {
 .legal-content__container {
   max-width: 860px;
   margin: 0 auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .legal-content__container h2 {
@@ -2634,4 +2646,13 @@ a.nav__dropdown-item .nav__dropdown-title {
 .legal-content__container strong {
   font-weight: 600;
   color: var(--text);
+}
+
+@media (max-width: 767px) {
+  .reveal, .fade-up, .legal-content__container {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    animation: none !important;
+  }
 }

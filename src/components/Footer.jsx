@@ -18,7 +18,7 @@ export default function Footer() {
               <a href="#">FinSync Advisory</a>
             </div>
             <div className="footer__col">
-              <span className="footer__col-title">Legal</span>
+              <span className="footer__col-title">Terms & Conditions</span>
 
               <Link to="/privacy-policy">
                 Privacy Policy
@@ -33,9 +33,16 @@ export default function Footer() {
               </Link>
             </div>
             <div className="footer__col">
-              <span className="footer__col-title">Contact</span>
+              <span className="footer__col-title">Contact Us</span>
               <a href="mailto:vincent@nurofin.com">vincent@nurofin.com</a>
               <a href="#">Request a Demo</a>
+              <span className="footer__address">
+                68, Neralu,<br />
+                Cybele Green Phase 2,<br />
+                4th Cross,<br />
+                Margondanahalli,<br />
+                Bangalore - 560036
+              </span>
             </div>
           </div>
         </div>
