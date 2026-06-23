@@ -5,6 +5,9 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import GMDIPage from './pages/GMDIPage'
 import AboutPage from './pages/AboutPage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
+import RefundPolicy from './pages/RefundPolicy'
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/gmdi" element={<GMDIPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsConditions />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
         </Routes>
       </main>
       <Footer />

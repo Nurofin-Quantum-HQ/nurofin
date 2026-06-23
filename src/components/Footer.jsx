@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer className="footer">
@@ -17,10 +18,19 @@ export default function Footer() {
               <a href="#">FinSync Advisory</a>
             </div>
             <div className="footer__col">
-              <span className="footer__col-title">Company</span>
-              <a href="#">About</a>
-              <a href="#">Technology</a>
-              <a href="#">Who We Serve</a>
+              <span className="footer__col-title">Legal</span>
+
+              <Link to="/privacy-policy">
+                Privacy Policy
+              </Link>
+
+              <Link to="/terms-and-conditions">
+                Terms & Conditions
+              </Link>
+
+              <Link to="/refund-policy">
+                Refund Policy
+              </Link>
             </div>
             <div className="footer__col">
               <span className="footer__col-title">Contact</span>
@@ -30,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <p className="footer__legal">© 2025 NUROFIN Quantum Flux LLP. All rights reserved.</p>
+          <p className="footer__legal">© 2026 NUROFIN Quantum Flux LLP. All rights reserved.</p>
           <div className="footer__email">
             <a href="mailto:vincent@nurofin.com">vincent@nurofin.com</a>
           </div>
