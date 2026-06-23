@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import './index.css'
+import ScrollToTop from './components/ScrollToTop'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
@@ -12,6 +13,7 @@ import RefundPolicy from './pages/RefundPolicy'
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Nav />
       <main>
         <Routes>
