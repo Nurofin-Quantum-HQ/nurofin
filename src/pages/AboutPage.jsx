@@ -5,17 +5,14 @@ const leadership = [
     name: 'Vincent Lucas',
     role: 'Founder & CEO',
     photo: '/images/team/vincent.jpg',
-    bio: `With over 15 years of experience across banking, payments, lending, financial inclusion, and fintech innovation, Vincent Lucas has built a career around turning emerging technologies into scalable financial solutions that create real business impact.
-
-He has worked closely with banks, NBFCs, fintechs, payment networks, and technology partners to build and scale digital financial ecosystems, with expertise spanning business leadership, strategic partnerships, product innovation, payments, lending, microfinance, cards, and financial infrastructure.
-
-Throughout his career, Vincent has consistently been at the forefront of industry transformation—supporting banks in EMV card and switch implementations during India's migration to chip-based payments, contributing to payment gateway initiatives during the early growth of digital payments, driving National Common Mobility Card (NCMC) implementations as India embraced interoperable transit payments, and working on innovative lending and microfinance programs, including blockchain-based systems for the microfinance sector, helping institutions leverage emerging technologies to improve efficiency, transparency, scalability, and customer experience.
-
-He has collaborated with leading financial institutions including ICICI Bank, HDFC Bank, Bank of Baroda, Federal Bank, City Union Bank, Karur Vysya Bank, Dhanlaxmi Bank, and several fintech and technology partners across India, the Middle East, and Africa.
-
-Driven by a passion for solving complex financial challenges, Vincent founded Nurofin to build intelligent financial infrastructure that enables institutions to orchestrate money movement, automate decisions, and deliver smarter financial experiences at scale.
-
-The future of financial services will not be built by moving money faster alone, but by enabling smarter decisions, greater transparency, and deeper trust across every financial journey.`,
+    bio: [
+      'With over 15 years of experience across banking, payments, lending, financial inclusion, and fintech innovation, Vincent Lucas has built a career around turning emerging technologies into scalable financial solutions that create real business impact.',
+      'He has worked closely with banks, NBFCs, fintechs, payment networks, and technology partners to build and scale digital financial ecosystems, with expertise spanning business leadership, strategic partnerships, product innovation, payments, lending, microfinance, cards, and financial infrastructure.',
+      'Throughout his career, Vincent has consistently been at the forefront of industry transformation—supporting banks in EMV card and switch implementations during India\'s migration to chip-based payments, contributing to payment gateway initiatives during the early growth of digital payments, driving National Common Mobility Card (NCMC) implementations as India embraced interoperable transit payments, and working on innovative lending and microfinance programs, including blockchain-based systems for the microfinance sector, helping institutions leverage emerging technologies to improve efficiency, transparency, scalability, and customer experience.',
+      'He has collaborated with leading financial institutions including ICICI Bank, HDFC Bank, Bank of Baroda, Federal Bank, City Union Bank, Karur Vysya Bank, Dhanlaxmi Bank, and several fintech and technology partners across India, the Middle East, and Africa.',
+      'Driven by a passion for solving complex financial challenges, Vincent founded Nurofin to build intelligent financial infrastructure that enables institutions to orchestrate money movement, automate decisions, and deliver smarter financial experiences at scale.',
+    ],
+    bioQuote: 'The future of financial services will not be built by moving money faster alone, but by enabling smarter decisions, greater transparency, and deeper trust across every financial journey.',
   },
 ]
 
@@ -89,7 +86,19 @@ export default function AboutPage() {
                   <h2 className="leader-card__name">{p.name}</h2>
                   <span className="leader-card__role">{p.role}</span>
                 </div>
-                <p className="leader-card__bio">{p.bio}</p>
+                <div className="leader-card__bio-wrap">
+                  {Array.isArray(p.bio)
+                    ? p.bio.map((para, idx) => (
+                        <p key={idx} className="leader-card__bio">{para}</p>
+                      ))
+                    : <p className="leader-card__bio">{p.bio}</p>
+                  }
+                  {p.bioQuote && (
+                    <p className="leader-card__bio leader-card__bio--quote">
+                      <strong>{p.bioQuote}</strong>
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           ))}

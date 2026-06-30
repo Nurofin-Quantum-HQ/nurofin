@@ -1238,12 +1238,30 @@ a.nav__dropdown-item .nav__dropdown-title {
   border-color: rgba(23,62,234,0.2);
 }
 
+.leader-card__bio-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .leader-card__bio {
   font-family: var(--body);
   font-size: clamp(14px, 1.3vw, 16px);
   font-weight: 300;
   color: var(--text-2);
   line-height: 1.8;
+}
+
+.leader-card__bio--quote {
+  margin-top: 4px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(103,200,255,0.35);
+  color: var(--text);
+}
+
+.light-section .leader-card__bio--quote {
+  border-left-color: rgba(23,62,234,0.25);
+  color: var(--text);
 }
 
 .leader-card__tags {
