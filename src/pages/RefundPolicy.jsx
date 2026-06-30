@@ -1,7 +1,4 @@
-import useReveal from '../hooks/useReveal'
-
 export default function RefundPolicy() {
-  const contentRef = useReveal()
 
   return (
     <>
@@ -19,7 +16,7 @@ export default function RefundPolicy() {
         </div>
       </section>
 
-      <section className="legal-content section" ref={contentRef}>
+      <section className="legal-content section">
         <div className="container legal-content__container reveal d1">
           <h2>Refund and Cancellation Policy</h2>
 <p><strong>NUROFIN QUANTUM FLUX LLP</strong> does not provide refund & cancellation for Online transactions made through Payment Gateway.</p>

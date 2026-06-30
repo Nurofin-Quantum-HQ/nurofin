@@ -1,7 +1,4 @@
-import useReveal from '../hooks/useReveal'
-
 export default function TermsConditions() {
-  const contentRef = useReveal()
 
   return (
     <>
@@ -19,7 +16,7 @@ export default function TermsConditions() {
         </div>
       </section>
 
-      <section className="legal-content section" ref={contentRef}>
+      <section className="legal-content section">
         <div className="container legal-content__container reveal d1">
           <h2>For Website and Mobile Apps</h2>
 <h3>1.1.</h3>
