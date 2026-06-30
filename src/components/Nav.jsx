@@ -33,6 +33,10 @@ export default function Nav() {
                   <span className="nav__dropdown-title">GMDI</span>
                   <span className="nav__dropdown-sub">Payment Transaction Governance</span>
                 </a>
+                <a href="/buildtrack" className="nav__dropdown-item">
+                  <span className="nav__dropdown-title">Build Track</span>
+                  <span className="nav__dropdown-sub">Construction Management Platform</span>
+                </a>
                 <div className="nav__dropdown-item nav__dropdown-item--soon">
                   <span className="nav__dropdown-title">LendLogic AI</span>
                   <span className="nav__dropdown-sub">Coming Soon</span>
@@ -81,6 +85,10 @@ export default function Nav() {
                 <a href="/gmdi" className="nav__mobile-product" onClick={closeMenu}>
                   <span className="nav__mobile-product-name">GMDI</span>
                   <span className="nav__mobile-product-sub">Payment Transaction Governance</span>
+                </a>
+                <a href="/buildtrack" className="nav__mobile-product" onClick={closeMenu}>
+                  <span className="nav__mobile-product-name">Build Track</span>
+                  <span className="nav__mobile-product-sub">Construction Management Platform</span>
                 </a>
                 <div className="nav__mobile-product nav__mobile-product--soon">
                   <span className="nav__mobile-product-name">LendLogic AI</span>

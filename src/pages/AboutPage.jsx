@@ -3,9 +3,19 @@ import useReveal from '../hooks/useReveal'
 const leadership = [
   {
     name: 'Vincent Lucas',
-    role: 'Founder',
+    role: 'Founder & CEO',
     photo: '/images/team/vincent.jpg',
-    bio: 'Founder of Nurofin Quantum Flux LLP with 10+ years of experience across payments, lending, and fintech ecosystems. Has led microfinance scale-up, banking partnerships, and large-scale initiatives including One Nation One Card (NCMC) and smart city payment solutions. Worked with leading institutions including ICICI Bank, HDFC Bank, Bank of Baroda, and global partners across the Middle East and Africa.',
+    bio: `With over 15 years of experience across banking, payments, lending, financial inclusion, and fintech innovation, Vincent Lucas has built a career around turning emerging technologies into scalable financial solutions that create real business impact.
+
+He has worked closely with banks, NBFCs, fintechs, payment networks, and technology partners to build and scale digital financial ecosystems, with expertise spanning business leadership, strategic partnerships, product innovation, payments, lending, microfinance, cards, and financial infrastructure.
+
+Throughout his career, Vincent has consistently been at the forefront of industry transformation—supporting banks in EMV card and switch implementations during India's migration to chip-based payments, contributing to payment gateway initiatives during the early growth of digital payments, driving National Common Mobility Card (NCMC) implementations as India embraced interoperable transit payments, and working on innovative lending and microfinance programs, including blockchain-based systems for the microfinance sector, helping institutions leverage emerging technologies to improve efficiency, transparency, scalability, and customer experience.
+
+He has collaborated with leading financial institutions including ICICI Bank, HDFC Bank, Bank of Baroda, Federal Bank, City Union Bank, Karur Vysya Bank, Dhanlaxmi Bank, and several fintech and technology partners across India, the Middle East, and Africa.
+
+Driven by a passion for solving complex financial challenges, Vincent founded Nurofin to build intelligent financial infrastructure that enables institutions to orchestrate money movement, automate decisions, and deliver smarter financial experiences at scale.
+
+The future of financial services will not be built by moving money faster alone, but by enabling smarter decisions, greater transparency, and deeper trust across every financial journey.`,
   },
 ]
 

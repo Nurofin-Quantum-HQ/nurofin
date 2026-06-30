@@ -1,7 +1,4 @@
-import useReveal from '../hooks/useReveal'
-
 export default function PrivacyPolicy() {
-  const contentRef = useReveal()
 
   return (
     <>
@@ -19,7 +16,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <section className="legal-content section" ref={contentRef}>
+      <section className="legal-content section">
         <div className="container legal-content__container reveal d1">
           <p>This privacy policy (“Privacy Policy”) is published according to the Information Technology Act, 2000, the Information Technology (Amendment) Act, 2008, and the Information Technology (Reasonable security practices and procedures and sensitive personal data or information) Rules, 2011, of the Republic of India.</p>
 <p>It is hereby clarified that the term "Users" shall mean any person using the Platform i.e. consumers, financial institutions, regulated entities, data partners and other partners. Your use of this Platform implies that You have read, understood and agreed to abide by following, disclaimer, terms & conditions ("Terms & Conditions").</p>

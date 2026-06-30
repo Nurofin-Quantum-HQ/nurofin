@@ -12,7 +12,8 @@ export default function Footer() {
           <div className="footer__links">
             <div className="footer__col">
               <span className="footer__col-title">Products</span>
-              <a href="#">GMDI</a>
+              <a href="/gmdi">GMDI</a>
+              <a href="/buildtrack">Build Track</a>
               <a href="#">LendLogic AI</a>
               <a href="#">RecoveryIQ</a>
               <a href="#">FinSync Advisory</a>
