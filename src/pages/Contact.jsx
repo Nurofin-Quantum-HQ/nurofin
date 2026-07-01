@@ -61,7 +61,7 @@ export default function Contact() {
               <span className="grad-text">remarkable together.</span>
             </h1>
             <p className="contact-hero__sub fade-up" style={{ animationDelay: '0.22s' }}>
-              Whether you're exploring BuildTrack, our Payout Engine, or have a general enquiry —
+              Whether you're exploring BuildTrack, GMDI or have a general enquiry —
               our team is ready to help.
             </p>
           </div>
