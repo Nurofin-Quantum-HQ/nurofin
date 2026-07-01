@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Hero() {
   return (
     <section className="hero" id="hero">
@@ -19,12 +21,12 @@ export default function Hero() {
           Nurofin builds AI-powered platforms that help banks, NBFCs, and fintechs make faster, smarter, more accountable decisions — across transactions, credit, and collections. You stay in control. We power the intelligence.
         </p>
         <div className="hero__ctas fade-up" style={{ animationDelay: '0.40s' }}>
-          <a href="mailto:vincent@nurofin.com" className="btn-primary">
+          <Link to="/contact" className="btn-primary">
             Contact Us
             <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
+          </Link>
           <a href="#products" className="btn-ghost">
             Explore the platform
           </a>

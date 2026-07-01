@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
   const [productsOpen, setProductsOpen] = useState(false)
@@ -56,12 +57,12 @@ export default function Nav() {
           <li><a href="/about" className="nav__link">The Team</a></li>
         </ul>
 
-        <a href="mailto:vincent@nurofin.com" className="btn-primary nav__cta">
+        <Link to="/contact" className="btn-primary nav__cta">
           Contact Us
           <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </a>
+        </Link>
 
         <button
           className={`nav__burger${menuOpen ? ' nav__burger--open' : ''}`}
@@ -106,12 +107,12 @@ export default function Nav() {
             </li>
             <li><a href="/about" className="nav__mobile-link" onClick={closeMenu}>The Team</a></li>
           </ul>
-          <a href="mailto:vincent@nurofin.com" className="btn-primary nav__mobile-cta" onClick={closeMenu}>
+          <Link to="/contact" className="btn-primary nav__mobile-cta" onClick={closeMenu}>
             Contact Us
             <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
+          </Link>
         </div>
       )}
     </>

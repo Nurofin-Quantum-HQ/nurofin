@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import useReveal from '../hooks/useReveal'
 
 const leadership = [
@@ -6,13 +7,13 @@ const leadership = [
     role: 'Founder & CEO',
     photo: '/images/team/vincent.jpg',
     bio: [
-      'With over 15 years of experience across banking, payments, lending, financial inclusion, and fintech innovation, Vincent Lucas has built a career around turning emerging technologies into scalable financial solutions that create real business impact.',
-      'He has worked closely with banks, NBFCs, fintechs, payment networks, and technology partners to build and scale digital financial ecosystems, with expertise spanning business leadership, strategic partnerships, product innovation, payments, lending, microfinance, cards, and financial infrastructure.',
-      'Throughout his career, Vincent has consistently been at the forefront of industry transformation—supporting banks in EMV card and switch implementations during India\'s migration to chip-based payments, contributing to payment gateway initiatives during the early growth of digital payments, driving National Common Mobility Card (NCMC) implementations as India embraced interoperable transit payments, and working on innovative lending and microfinance programs, including blockchain-based systems for the microfinance sector, helping institutions leverage emerging technologies to improve efficiency, transparency, scalability, and customer experience.',
-      'He has collaborated with leading financial institutions including ICICI Bank, HDFC Bank, Bank of Baroda, Federal Bank, City Union Bank, Karur Vysya Bank, Dhanlaxmi Bank, and several fintech and technology partners across India, the Middle East, and Africa.',
-      'Driven by a passion for solving complex financial challenges, Vincent founded Nurofin to build intelligent financial infrastructure that enables institutions to orchestrate money movement, automate decisions, and deliver smarter financial experiences at scale.',
+      'With over 15 years of experience across banking, payments, lending, microfinance, financial inclusion, and fintech innovation, Vincent Lucas has built a career around transforming emerging technologies into scalable financial solutions.',
+      'He has worked with banks, NBFCs, fintechs, payment networks, and technology partners to build and scale digital financial ecosystems, spanning payments, lending, cards, financial infrastructure, strategic partnerships, and product innovation.',
+      'Throughout his career, Vincent has been at the forefront of industry transformation—from supporting EMV card and switch implementations during India\'s migration to chip-based payments, to contributing to early digital payment initiatives, driving National Common Mobility Card (NCMC) programs, and implementing blockchain-based systems for the microfinance sector.',
+      'He has collaborated with leading institutions including ICICI Bank, HDFC Bank, Bank of Baroda, Federal Bank, City Union Bank, Karur Vysya Bank, Dhanlaxmi Bank, and partners across India, the Middle East, and Africa.',
+      'Driven by a passion for innovation, Vincent founded Nurofin to build intelligent financial infrastructure that helps institutions orchestrate money movement, automate decisions, and create trusted financial experiences.',
     ],
-    bioQuote: 'The future of financial services will not be built by moving money faster alone, but by enabling smarter decisions, greater transparency, and deeper trust across every financial journey.',
+    bioQuote: 'The future of financial services will be powered by smarter decisions, greater trust, and intelligent technology.',
   },
 ]
 
@@ -50,6 +51,18 @@ export default function AboutPage() {
   const leadershipRef = useReveal()
   const teamRef = useReveal()
   const advisorsRef = useReveal()
+  const [emailCopied, setEmailCopied] = useState(false)
+
+  const handleCopyEmail = async (e) => {
+    const email = 'vincent@nurofin.com'
+    try {
+      await navigator.clipboard.writeText(email)
+    } catch {
+      // Clipboard API blocked — fall through; mailto: will still open
+    }
+    setEmailCopied(true)
+    setTimeout(() => setEmailCopied(false), 2200)
+  }
 
   return (
     <>
@@ -94,9 +107,36 @@ export default function AboutPage() {
                     : <p className="leader-card__bio">{p.bio}</p>
                   }
                   {p.bioQuote && (
-                    <p className="leader-card__bio leader-card__bio--quote">
-                      <strong>{p.bioQuote}</strong>
+                    <p className="leader-card__quote" style={{ fontSize: '1.1em', fontWeight: 'bold', color: 'var(--color-primary, #67C8FF)', marginTop: '20px' }}>
+                      "{p.bioQuote}"
                     </p>
+                  )}
+                  {/* Email link with clipboard copy — only for Vincent */}
+                  {p.name === 'Vincent Lucas' && (
+                    <div className="leader-card__contact">
+                      <a
+                        href="mailto:vincent@nurofin.com"
+                        onClick={handleCopyEmail}
+                        className="leader-card__email-link"
+                        aria-label="Email Vincent Lucas (also copies to clipboard)"
+                      >
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                          <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        vincent@nurofin.com
+                      </a>
+                      <span
+                        className={`leader-card__copy-badge${emailCopied ? ' leader-card__copy-badge--visible' : ''}`}
+                        aria-live="polite"
+                        aria-atomic="true"
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Copied!
+                      </span>
+                    </div>
                   )}
                 </div>
               </div>

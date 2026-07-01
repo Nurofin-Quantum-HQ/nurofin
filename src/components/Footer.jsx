@@ -35,8 +35,8 @@ export default function Footer() {
             </div>
             <div className="footer__col">
               <span className="footer__col-title">Contact Us</span>
-              <a href="mailto:vincent@nurofin.com">vincent@nurofin.com</a>
-              <a href="#">Request a Demo</a>
+              <a href="mailto:info.nurofin@gmail.com">info.nurofin@gmail.com</a>
+              <Link to="/contact">Request a Demo</Link>
               <span className="footer__address">
                 68, Neralu,<br />
                 Cybele Green Phase 2,<br />
@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="footer__bottom">
           <p className="footer__legal">© 2026 NUROFIN Quantum Flux LLP. All rights reserved.</p>
           <div className="footer__email">
-            <a href="mailto:vincent@nurofin.com">vincent@nurofin.com</a>
+            <a href="mailto:info.nurofin@gmail.com">info.nurofin@gmail.com</a>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import useReveal from '../../hooks/useReveal'
 
 export default function GMDICTA() {
@@ -20,12 +21,12 @@ export default function GMDICTA() {
             GMDI is live and deployed across financial institutions in India. See how it fits your payment stack in a 30-minute demo.
           </p>
           <div className="hero__ctas reveal d4">
-            <a href="mailto:vincent@nurofin.com" className="btn-primary">
+            <Link to="/contact" className="btn-primary">
               Contact Us
               <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="gmdi-cta__tagline reveal d5">
             Fast. Clean. Transparent financial journeys.

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const features = [
   {
@@ -103,6 +104,7 @@ const tags = [
 
 export default function BuildTrack() {
   const [activeModule, setActiveModule] = useState(0)
+  const navigate = useNavigate()
 
   return (
     <>
@@ -128,12 +130,9 @@ export default function BuildTrack() {
               ))}
             </div>
             <div className="bt-hero__ctas fade-up" style={{ animationDelay: '0.44s' }}>
-              <a href="mailto:vincent@nurofin.com" className="btn-primary">
+              <p className="hero-subtext" style={{ fontWeight: 'bold', fontSize: '1.125rem' }}>
                 Start Free. Scale as You Grow.
-                <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
+              </p>
             </div>
           </div>
         </div>
@@ -289,12 +288,12 @@ export default function BuildTrack() {
                   <span>{p.users}</span>
                 </div>
                 <p className="bt-price-card__features">{p.features}</p>
-                <a
-                  href="mailto:vincent@nurofin.com"
+                <button
+                  onClick={() => navigate('/contact')}
                   className={p.popular ? 'btn-primary bt-price-card__cta' : 'btn-ghost bt-price-card__cta'}
                 >
-                  {p.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </a>
+                  {p.name === 'Enterprise' ? 'Contact Sales' : 'Contact Us'}
+                </button>
               </div>
             ))}
           </div>
@@ -328,18 +327,9 @@ export default function BuildTrack() {
               Gain complete visibility into project costs, progress, and profitability with Build Track.
             </p>
             <div className="bt-cta__buttons">
-              <a href="mailto:vincent@nurofin.com" className="btn-primary">
+              <button onClick={() => navigate('/contact')} className="btn-primary">
                 Request a Demo
-                <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-              <a href="mailto:vincent@nurofin.com" className="btn-ghost">
-                Start Free Trial
-                <svg className="btn-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
+              </button>
             </div>
           </div>
         </div>

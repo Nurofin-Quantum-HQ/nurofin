@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import VideoModal from './VideoModal'
 
 export default function GMDIHero() {
@@ -31,7 +32,7 @@ export default function GMDIHero() {
               </svg>
               Watch Video
             </button>
-            <a href="mailto:vincent@nurofin.com" className="btn-ghost">Contact Us</a>
+            <Link to="/contact" className="btn-ghost">Contact Us</Link>
           </div>
         </div>
 
