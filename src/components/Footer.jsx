@@ -42,7 +42,7 @@ export default function Footer() {
                 Cybele Green Phase 2,<br />
                 4th Cross,<br />
                 Margondanahalli,<br />
-                Bangalore - 560036
+                Bangalore - 560049
               </span>
             </div>
           </div>
