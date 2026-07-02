@@ -38,11 +38,11 @@ export default function Footer() {
               <a href="mailto:info.nurofin@gmail.com">info.nurofin@gmail.com</a>
               <Link to="/contact">Request a Demo</Link>
               <span className="footer__address">
-                68, Neralu,<br />
-                Cybele Green Phase 2,<br />
-                4th Cross,<br />
-                Margondanahalli,<br />
-                Bangalore - 560049
+                No.68, Sy No.133/1,<br />
+                2nd Cross, 4th Main Road,<br />
+                Kithiganuru Village, Bidarahalli,<br />
+                Bengaluru, Bengaluru Urban,<br />
+                Karnataka, 560049
               </span>
             </div>
           </div>
