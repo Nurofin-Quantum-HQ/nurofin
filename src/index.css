@@ -3667,3 +3667,232 @@ a.contact-info__value:hover { color: var(--azure); }
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+/* ============================================
+   ABOUT US PAGE
+   ============================================ */
+
+/* ── Hero ── */
+.aboutus-hero {
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  padding-top: 64px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.aboutus-hero__glow {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 65%;
+  height: 130%;
+  background: radial-gradient(ellipse at top left, rgba(177,55,255,0.12) 0%, rgba(23,62,234,0.06) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+.aboutus-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding: clamp(48px, 6vw, 80px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+}
+
+.aboutus-hero__sub {
+  font-family: var(--body);
+  font-size: clamp(15px, 1.5vw, 19px);
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* ── Content Section ── */
+.aboutus-content {
+  background: var(--bg);
+}
+
+.aboutus-content__container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.aboutus-content__container p {
+  font-family: var(--body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ── Vision & Mission ── */
+.aboutus-vm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 32px);
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+.aboutus-vm__card {
+  padding: clamp(28px, 3vw, 40px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus-vm__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad);
+}
+
+.aboutus-vm__icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  color: var(--azure);
+  margin-bottom: 20px;
+}
+
+.aboutus-vm__card h2 {
+  font-family: var(--heading);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.aboutus-vm__card p {
+  font-family: var(--body);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* ── Differentiators Section ── */
+.aboutus-diff__heading {
+  margin-bottom: clamp(36px, 4.5vw, 56px);
+}
+
+.aboutus-diff__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.aboutus-diff__card {
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutus-diff__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.aboutus-diff__card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(23,62,234,0.06);
+  border: 1px solid rgba(23,62,234,0.15);
+  border-radius: 12px;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.aboutus-diff__card-title {
+  font-family: var(--heading);
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.aboutus-diff__card-desc {
+  font-family: var(--body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+/* ── Closing Statement ── */
+.aboutus-closing {
+  background: var(--bg);
+}
+
+.aboutus-closing__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(32px, 5vw, 64px) clamp(24px, 4vw, 48px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutus-closing__inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad);
+}
+
+.aboutus-closing__text {
+  font-family: var(--body);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ── About Us Responsive ── */
+@media (max-width: 768px) {
+  .aboutus-vm {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutus-diff__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .aboutus-diff__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

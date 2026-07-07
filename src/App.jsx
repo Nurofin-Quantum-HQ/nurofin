@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import GMDIPage from './pages/GMDIPage'
 import AboutPage from './pages/AboutPage'
+import AboutUsPage from './pages/AboutUsPage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/TermsConditions'
 import RefundPolicy from './pages/RefundPolicy'
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/gmdi" element={<GMDIPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsConditions />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />

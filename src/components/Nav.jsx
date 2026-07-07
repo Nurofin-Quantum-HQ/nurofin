@@ -54,6 +54,7 @@ export default function Nav() {
               </div>
             )}
           </li>
+          <li><a href="/about-us" className="nav__link">About Us</a></li>
           <li><a href="/about" className="nav__link">The Team</a></li>
         </ul>
 
@@ -105,6 +106,7 @@ export default function Nav() {
                 </div>
               </div>
             </li>
+            <li><a href="/about-us" className="nav__mobile-link" onClick={closeMenu}>About Us</a></li>
             <li><a href="/about" className="nav__mobile-link" onClick={closeMenu}>The Team</a></li>
           </ul>
           <Link to="/contact" className="btn-primary nav__mobile-cta" onClick={closeMenu}>
